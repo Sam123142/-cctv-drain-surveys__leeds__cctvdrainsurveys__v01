@@ -1,9 +1,10 @@
-# CCTV Drain Surveys Leeds Project
+# CCTV Drain Surveys Leeds
 
-This repository contains the source code for a local SEO-optimized service site targeting CCTV drain survey services in Leeds and surrounding areas.
+Local SEO site for CCTV drain survey services, serving Leeds and nearby areas.
 
-- **Primary Keyword:** CCTV drain surveys Leeds
-- **Site Structure:** /docs (PRD/Notes), /src (Site code), /public (Assets)
-- **Local Dev:** `npm install` and `npm run dev` (placeholder commands)
-- **Deployment:** Vercel/Netlify (placeholder)
-- **Repo Name:** `cctv-drain-surveys__leeds__cctvdrainsurveys__v01`
+- **Primary keyword:** CCTV drain surveys Leeds
+- **Stack:** Next.js (App Router), TypeScript, vanilla CSS
+- **Run locally:** `npm install && npm run dev` → [http://localhost:3000](http://localhost:3000)
+- **Routes:** `/` · `/cctv-drain-surveys-leeds` · `/areas-we-cover` · `/about` · `/contact` · `/privacy` · `/cookies`
+- **Config:** Copy `.env.example` → `.env.local` and fill in phone number + site URL
+- **Deploy:** Vercel / Netlify (placeholder — configure before launch)

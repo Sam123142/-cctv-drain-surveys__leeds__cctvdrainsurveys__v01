@@ -23,7 +23,7 @@ export default function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} noValidate>
+        <form onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="contact-name">Your Name</label>
                 <input type="text" id="contact-name" name="name" required autoComplete="name" />

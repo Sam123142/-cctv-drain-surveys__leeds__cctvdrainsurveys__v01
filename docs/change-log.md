@@ -1,5 +1,14 @@
 # Change Log: CCTV Drain Surveys Leeds Project
 
+## [2026-02-26] – Step 3: QA & Fixes
+- **pass:** Full Content QA — confirmed 100% compliance with Truth Rules (no fake offices, reviews, or "based in" claims).
+- **pass:** SEO QA — verified H1 hierarchy, per-page metadata, canonicals, sitemap.xml, and robots.txt.
+- **pass:** Conversion QA — verified phone visibility, click-to-call, and form success states.
+- **pass:** Performance QA — verified lightweight vanilla CSS and no heavy dependencies.
+- **fix:** Enabled browser-native form validation by removing `noValidate` from `ContactForm`.
+- **docs:** Completed `/docs/qa-checklist.md` with verification notes.
+
+
 ## [2026-02-26] – Step 2: Site Build
 - **feat:** Scaffolded Next.js App Router project (TypeScript, vanilla CSS).
 - **feat:** Created shared layout with Header (sticky, responsive, hamburger), Footer (3-col), PhoneBar (mobile click-to-call).

@@ -5,7 +5,7 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || 'https://cctvdrainsurveysleeds.co.uk';
 
 export const PHONE_DISPLAY =
-  process.env.NEXT_PUBLIC_PHONE || '0113 000 0000';
+  process.env.NEXT_PUBLIC_PHONE || '0113 734 2411';
 
 export const PHONE_TEL = PHONE_DISPLAY.replace(/\s/g, '');
 

@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneBar from '@/components/PhoneBar';
+import Script from 'next/script';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 
 const inter = Inter({
@@ -44,6 +45,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en-GB" className={inter.variable}>
+            <head>
+                <Script id="lead-tracking-init" strategy="afterInteractive">
+                    {`var $wc_load=function(a){return JSON.parse(JSON.stringify(a))},$wc_leads=$wc_leads||{doc:{url:$wc_load(document.URL),ref:$wc_load(document.referrer),search:$wc_load(location.search),hash:$wc_load(location.hash)}};`}
+                </Script>
+                <Script
+                    id="lead-tracking-script"
+                    src="//s.ksrndkehqnwntyxlhgto.com/163488.js"
+                    strategy="afterInteractive"
+                />
+            </head>
             <body>
                 <a href="#main-content" className="sr-only" style={{ position: 'absolute' }}>
                     Skip to main content

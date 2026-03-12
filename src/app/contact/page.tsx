@@ -32,6 +32,7 @@ export default function ContactPage() {
                             </p>
 
                             <div className="card mt-3" style={{ textAlign: 'center' }}>
+                                <img src="/icons/phone.svg" alt="" className="icon icon--sm mb-1" style={{ marginInline: 'auto' }} />
                                 <h3 style={{ marginBottom: '0.5rem' }}>Call Us</h3>
                                 <a
                                     href={`tel:${PHONE_TEL}`}

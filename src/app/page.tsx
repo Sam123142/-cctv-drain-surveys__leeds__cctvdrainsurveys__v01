@@ -76,7 +76,9 @@ export default function HomePage() {
                     <h2 className="text-center mb-3">How It Works</h2>
                     <div className="steps">
                         <div className="step card">
-                            <div className="step__number">1</div>
+                            <div className="step__number">
+                                <img src="/icons/phone.svg" alt="" className="icon icon--sm" style={{ filter: 'brightness(0) invert(1)' }} />
+                            </div>
                             <h3>Get in Touch</h3>
                             <p>
                                 Call us or fill in the short form with your details and a brief description
@@ -84,7 +86,9 @@ export default function HomePage() {
                             </p>
                         </div>
                         <div className="step card">
-                            <div className="step__number">2</div>
+                            <div className="step__number">
+                                <img src="/icons/camera.svg" alt="" className="icon icon--sm" style={{ filter: 'brightness(0) invert(1)' }} />
+                            </div>
                             <h3>We Carry Out the Survey</h3>
                             <p>
                                 A drainage engineer visits the property, feeds the HD camera through
@@ -92,7 +96,9 @@ export default function HomePage() {
                             </p>
                         </div>
                         <div className="step card">
-                            <div className="step__number">3</div>
+                            <div className="step__number">
+                                <img src="/icons/inspection-report.svg" alt="" className="icon icon--sm" style={{ filter: 'brightness(0) invert(1)' }} />
+                            </div>
                             <h3>Receive Your Report</h3>
                             <p>
                                 You get a written report with annotated images, a summary of findings,
@@ -106,7 +112,10 @@ export default function HomePage() {
             {/* ── Areas Served ──────────────────────────────── */}
             <section className="section">
                 <div className="container">
-                    <h2 className="text-center mb-2">Serving Leeds and Nearby Areas</h2>
+                    <h2 className="text-center mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+                        <img src="/icons/location.svg" alt="" className="icon icon--sm" />
+                        Serving Leeds and Nearby Areas
+                    </h2>
                     <p className="text-center text-muted mb-3">
                         We cover Leeds city centre and the surrounding areas, including:
                     </p>

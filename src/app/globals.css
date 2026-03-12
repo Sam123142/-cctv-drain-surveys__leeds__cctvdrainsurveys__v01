@@ -102,6 +102,17 @@ p {
   margin-bottom: 1rem;
 }
 
+/* ── Icons ────────────────────────────────────────────────── */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.icon--sm { width: 24px; height: 24px; }
+.icon--md { width: 48px; height: 48px; }
+.icon--lg { width: 64px; height: 64px; }
+
 /* ── Layout Utilities ─────────────────────────────────────── */
 .container {
   width: 100%;

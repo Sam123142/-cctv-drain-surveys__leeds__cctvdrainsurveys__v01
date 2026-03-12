@@ -95,7 +95,9 @@ export default function ServicePage() {
                     <h2 className="text-center mb-3">How the Survey Works</h2>
                     <div className="steps">
                         <div className="step card">
-                            <div className="step__number">1</div>
+                            <div className="step__number">
+                                <img src="/icons/phone.svg" alt="" className="icon icon--sm" style={{ filter: 'brightness(0) invert(1)' }} />
+                            </div>
                             <h3>Book Your Survey</h3>
                             <p>
                                 Give us a call or send an enquiry through the form. Let us know
@@ -104,7 +106,9 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="step card">
-                            <div className="step__number">2</div>
+                            <div className="step__number">
+                                <img src="/icons/camera.svg" alt="" className="icon icon--sm" style={{ filter: 'brightness(0) invert(1)' }} />
+                            </div>
                             <h3>On-Site Inspection</h3>
                             <p>
                                 We access the drainage system via an inspection chamber or other
@@ -113,7 +117,9 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="step card">
-                            <div className="step__number">3</div>
+                            <div className="step__number">
+                                <img src="/icons/inspection-report.svg" alt="" className="icon icon--sm" style={{ filter: 'brightness(0) invert(1)' }} />
+                            </div>
                             <h3>Report &amp; Recommendations</h3>
                             <p>
                                 You receive a clear, written report with imagery and a summary of
@@ -175,6 +181,7 @@ export default function ServicePage() {
                     </p>
                     <div className="grid-3">
                         <div className="card">
+                            <img src="/icons/problem-drain.svg" alt="" className="icon icon--sm mb-1" />
                             <h3>Blockages</h3>
                             <p>
                                 Fat, grease, wet wipes, and general debris are the most common culprits.
@@ -182,6 +189,7 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="card">
+                            <img src="/icons/problem-sewer.svg" alt="" className="icon icon--sm mb-1" />
                             <h3>Root Ingress</h3>
                             <p>
                                 Tree and shrub roots can force their way into pipe joints, causing
@@ -190,6 +198,7 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="card">
+                            <img src="/icons/problem-leak.svg" alt="" className="icon icon--sm mb-1" />
                             <h3>Cracked or Broken Pipes</h3>
                             <p>
                                 Ground movement, heavy vehicles, or age can crack pipes. The camera
@@ -197,6 +206,7 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="card">
+                            <img src="/icons/service-tools.svg" alt="" className="icon icon--sm mb-1" />
                             <h3>Displaced Joints</h3>
                             <p>
                                 Where pipes have separated at the joints, allowing soil and water to
@@ -204,6 +214,7 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="card">
+                            <img src="/icons/camera.svg" alt="" className="icon icon--sm mb-1" />
                             <h3>Collapsed Drains</h3>
                             <p>
                                 In severe cases, the pipe has collapsed entirely. A survey confirms
@@ -211,6 +222,7 @@ export default function ServicePage() {
                             </p>
                         </div>
                         <div className="card">
+                            <img src="/icons/inspection-report.svg" alt="" className="icon icon--sm mb-1" />
                             <h3>Scale &amp; Corrosion</h3>
                             <p>
                                 Iron and steel pipes can corrode internally, reducing flow capacity.
@@ -295,7 +307,10 @@ export default function ServicePage() {
             {/* ── Areas Served ──────────────────────────────── */}
             <section className="section section--alt">
                 <div className="container">
-                    <h2 className="text-center mb-2">Areas We Cover in Leeds</h2>
+                    <h2 className="text-center mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+                        <img src="/icons/location.svg" alt="" className="icon icon--sm" />
+                        Areas We Cover in Leeds
+                    </h2>
                     <p className="text-center text-muted mb-3">
                         We carry out drain surveys across Leeds and the surrounding areas, including:
                     </p>

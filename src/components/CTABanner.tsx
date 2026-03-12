@@ -14,6 +14,7 @@ export default function CTABanner({
 }: CTABannerProps) {
     return (
         <div className="cta-banner">
+            <img src="/icons/service-truck.svg" alt="" className="icon icon--md mb-2" style={{ marginInline: 'auto' }} />
             <h2>{heading}</h2>
             <p>{text}</p>
             <div className="cta-banner__actions">

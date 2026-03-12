@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import CTABanner from '@/components/CTABanner';
-import { AREAS } from '@/lib/constants';
+import { AREA_DATA } from '@/lib/areas';
 
 export const metadata: Metadata = {
     title: 'Areas We Cover – CCTV Drain Surveys in Leeds & Surrounding Areas',
@@ -34,13 +34,18 @@ export default function AreasPage() {
                     </p>
 
                     <div className="grid-4">
-                        {AREAS.map((area) => (
-                            <div key={area} className="card text-center" style={{ padding: '1rem' }}>
-                                <h3 style={{ fontSize: '1rem', marginBottom: '0.25rem' }}>{area}</h3>
+                        {AREA_DATA.map((area) => (
+                            <Link
+                                key={area.slug}
+                                href={`/areas/${area.slug}`}
+                                className="card card--area-link text-center"
+                                style={{ padding: '1rem', textDecoration: 'none', color: 'inherit', display: 'block' }}
+                            >
+                                <h3 style={{ fontSize: '1rem', marginBottom: '0.25rem' }}>{area.name}</h3>
                                 <p className="text-muted" style={{ fontSize: '0.85rem', marginBottom: 0 }}>
                                     CCTV drain surveys
                                 </p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 

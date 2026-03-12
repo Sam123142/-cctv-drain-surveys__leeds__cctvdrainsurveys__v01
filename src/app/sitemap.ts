@@ -1,10 +1,12 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
+import { AREA_DATA } from '@/lib/areas';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const now = new Date().toISOString();
 
-    return [
+    /* ── Core pages ────────────────────────────────────────── */
+    const corePages: MetadataRoute.Sitemap = [
         {
             url: SITE_URL,
             lastModified: now,
@@ -48,4 +50,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.2,
         },
     ];
+
+    /* ── Dynamic area pages ────────────────────────────────── */
+    const areaPages: MetadataRoute.Sitemap = AREA_DATA.map((area) => ({
+        url: `${SITE_URL}/areas/${area.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+    }));
+
+    return [...corePages, ...areaPages];
 }

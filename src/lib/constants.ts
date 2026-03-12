@@ -1,4 +1,6 @@
 /* ── Site-wide constants ──────────────────────────────────── */
+import { AREA_DATA } from './areas';
+
 
 // TODO: Replace with real values before launch – see .env.example
 export const SITE_URL =
@@ -25,25 +27,4 @@ export const FOOTER_LINKS = [
   { href: '/cookies', label: 'Cookies Policy' },
 ] as const;
 
-export const AREAS = [
-  'Headingley',
-  'Roundhay',
-  'Horsforth',
-  'Moortown',
-  'Chapel Allerton',
-  'Pudsey',
-  'Morley',
-  'Garforth',
-  'Wetherby',
-  'Otley',
-  'Rothwell',
-  'Guiseley',
-  'Yeadon',
-  'Bramley',
-  'Kirkstall',
-  'Beeston',
-  'Armley',
-  'Meanwood',
-  'Oakwood',
-  'Cross Gates',
-] as const;
+export const AREAS = AREA_DATA.map(a => a.name);

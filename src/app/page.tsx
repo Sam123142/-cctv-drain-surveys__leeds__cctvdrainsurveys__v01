@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import CTABanner from '@/components/CTABanner';
-import { PHONE_DISPLAY, PHONE_TEL, AREAS } from '@/lib/constants';
+import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/constants';
+import { AREA_DATA } from '@/lib/areas';
 
 export const metadata: Metadata = {
     title: 'CCTV Drain Surveys Leeds | Professional Drain Inspections',
@@ -110,9 +111,9 @@ export default function HomePage() {
                         We cover Leeds city centre and the surrounding areas, including:
                     </p>
                     <div className="area-tags" style={{ justifyContent: 'center' }}>
-                        {AREAS.map((area) => (
-                            <Link key={area} href="/areas-we-cover" className="area-tag">
-                                {area}
+                        {AREA_DATA.map((area) => (
+                            <Link key={area.slug} href={`/areas/${area.slug}`} className="area-tag">
+                                {area.name}
                             </Link>
                         ))}
                     </div>

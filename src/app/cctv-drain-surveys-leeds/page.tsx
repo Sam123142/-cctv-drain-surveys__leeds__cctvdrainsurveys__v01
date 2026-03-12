@@ -307,10 +307,7 @@ export default function ServicePage() {
             {/* ── Areas Served ──────────────────────────────── */}
             <section className="section section--alt">
                 <div className="container">
-                    <h2 className="text-center mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                        <img src="/icons/location.svg" alt="" className="icon icon--sm" />
-                        Areas We Cover in Leeds
-                    </h2>
+                    <h2 className="text-center mb-2">Areas We Cover in Leeds</h2>
                     <p className="text-center text-muted mb-3">
                         We carry out drain surveys across Leeds and the surrounding areas, including:
                     </p>

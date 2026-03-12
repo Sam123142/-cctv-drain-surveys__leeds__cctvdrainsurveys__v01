@@ -41,7 +41,6 @@ export default function AreasPage() {
                                 className="card card--area-link text-center"
                                 style={{ padding: '1rem', textDecoration: 'none', color: 'inherit', display: 'block' }}
                             >
-                                <img src="/icons/location.svg" alt="" className="icon icon--sm mb-1" style={{ marginInline: 'auto', opacity: 0.7 }} />
                                 <h3 style={{ fontSize: '1rem', marginBottom: '0.25rem' }}>{area.name}</h3>
                                 <p className="text-muted" style={{ fontSize: '0.85rem', marginBottom: 0 }}>
                                     CCTV drain surveys

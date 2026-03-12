@@ -112,10 +112,7 @@ export default function HomePage() {
             {/* ── Areas Served ──────────────────────────────── */}
             <section className="section">
                 <div className="container">
-                    <h2 className="text-center mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                        <img src="/icons/location.svg" alt="" className="icon icon--sm" />
-                        Serving Leeds and Nearby Areas
-                    </h2>
+                    <h2 className="text-center mb-2">Serving Leeds and Nearby Areas</h2>
                     <p className="text-center text-muted mb-3">
                         We cover Leeds city centre and the surrounding areas, including:
                     </p>

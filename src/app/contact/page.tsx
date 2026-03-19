@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import ContactForm from '@/components/ContactForm';
 import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/constants';
 
@@ -12,8 +13,16 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <>
-            <section className="hero" style={{ paddingBlock: '2.5rem' }}>
-                <div className="container">
+            <section className="hero hero--has-image" style={{ paddingBlock: '3rem' }}>
+                <Image
+                    src="/images/drainage-report-sample.png"
+                    alt="Sample CCTV drain survey report with imagery"
+                    fill
+                    priority
+                    className="hero__bg"
+                    sizes="100vw"
+                />
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <h1>Contact Us</h1>
                     <p>
                         Call us directly or fill in the form below for a no-obligation quote.
@@ -42,14 +51,25 @@ export default function ContactPage() {
                                 </a>
                             </div>
 
-                            <div className="mt-4">
-                                <h3>What to Tell Us</h3>
-                                <ul className="check-list">
-                                    <li>The type of property (house, flat, commercial)</li>
-                                    <li>Your postcode or area in Leeds</li>
-                                    <li>The reason for the survey (purchase, blockage, maintenance)</li>
-                                    <li>Any symptoms you&rsquo;ve noticed (slow drains, smells, damp)</li>
-                                </ul>
+                            <div className="mt-4 grid-2" style={{ alignItems: 'center', gap: '1.5rem' }}>
+                                <div>
+                                    <h3>What to Tell Us</h3>
+                                    <ul className="check-list">
+                                        <li>The type of property</li>
+                                        <li>Your postcode or area in Leeds</li>
+                                        <li>The reason for the survey</li>
+                                        <li>Any symptoms noticed</li>
+                                    </ul>
+                                </div>
+                                <div className="image-wrapper">
+                                    <Image
+                                        src="/images/drain-inspection-technician.png"
+                                        alt="Drainage technician at a Leeds property"
+                                        width={400}
+                                        height={300}
+                                        className="img-resp"
+                                    />
+                                </div>
                             </div>
 
                             <p className="mt-3 text-muted" style={{ fontSize: '0.875rem' }}>

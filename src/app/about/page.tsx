@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'About – CCTV Drain Surveys Leeds',
@@ -11,8 +12,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
-            <section className="hero" style={{ paddingBlock: '2.5rem' }}>
-                <div className="container">
+            <section className="hero hero--has-image" style={{ paddingBlock: '3rem' }}>
+                <Image
+                    src="/images/drain-survey-van-equipment.jpg"
+                    alt="CCTV drain survey equipment and service van in Leeds"
+                    fill
+                    priority
+                    className="hero__bg"
+                    sizes="100vw"
+                />
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <h1>About Our Service</h1>
                     <p>
                         Straightforward CCTV drain surveys, serving Leeds and nearby areas.
@@ -29,6 +38,15 @@ export default function AboutPage() {
                         through our enquiry form — we take your details and arrange a
                         convenient time for the survey to be carried out.
                     </p>
+                    <div className="image-wrapper mb-3">
+                        <Image
+                            src="/images/drain-inspection-technician.png"
+                            alt="Professional drainage engineer using HD camera equipment"
+                            width={800}
+                            height={450}
+                            className="img-resp"
+                        />
+                    </div>
                     <p>
                         A qualified drainage engineer visits the property with specialist
                         HD camera equipment. The camera is fed through the drainage system

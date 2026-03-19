@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import CTABanner from '@/components/CTABanner';
 import { AREA_DATA } from '@/lib/areas';
 
@@ -14,8 +15,16 @@ export default function AreasPage() {
     return (
         <>
             {/* ── Header ────────────────────────────────────── */}
-            <section className="hero" style={{ paddingBlock: '2.5rem' }}>
-                <div className="container">
+            <section className="hero hero--has-image" style={{ paddingBlock: '3.5rem' }}>
+                <Image
+                    src="/images/drain-blockage-investigation.png"
+                    alt="Leeds city view for drainage services"
+                    fill
+                    priority
+                    className="hero__bg"
+                    sizes="100vw"
+                />
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <h1>Areas We Cover</h1>
                     <p>
                         CCTV drain surveys serving Leeds city centre and the surrounding areas.

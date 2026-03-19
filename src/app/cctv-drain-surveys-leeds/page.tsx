@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import CTABanner from '@/components/CTABanner';
 import ContactForm from '@/components/ContactForm';
 import { PHONE_DISPLAY, PHONE_TEL, SITE_URL } from '@/lib/constants';
@@ -48,8 +49,16 @@ export default function ServicePage() {
             />
 
             {/* ── Hero ──────────────────────────────────────── */}
-            <section className="hero">
-                <div className="container">
+            <section className="hero hero--has-image">
+                <Image
+                    src="/images/drain-survey-team-leeds.jpg"
+                    alt="CCTV drain survey team performing an inspection in Leeds"
+                    fill
+                    priority
+                    className="hero__bg"
+                    sizes="100vw"
+                />
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <h1>CCTV Drain Surveys in Leeds</h1>
                     <p>
                         Detailed HD camera inspections of your drainage system. We identify
@@ -79,6 +88,17 @@ export default function ServicePage() {
                             <li>Identification of blockages, cracks, root ingress, and displaced joints</li>
                             <li>Pipe material, diameter, and depth information (where accessible)</li>
                         </ul>
+                        <div className="image-wrapper card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <Image
+                                src="/images/cctv-drain-internal-view.png"
+                                alt="Crystal clear internal view of a drainage pipe from our HD camera"
+                                width={500}
+                                height={300}
+                                className="img-resp"
+                            />
+                        </div>
+                    </div>
+                    <div className="grid-2 mt-2">
                         <ul className="check-list">
                             <li>Location and severity grading of any defects found</li>
                             <li>Recommendations for repair, relining, or further investigation</li>
@@ -135,37 +155,73 @@ export default function ServicePage() {
                 <div className="container">
                     <h2>Who Needs a CCTV Drain Survey?</h2>
                     <div className="grid-2 mt-2">
-                        <div className="card">
-                            <h3>Home Buyers</h3>
-                            <p>
-                                If you&rsquo;re buying a property in Leeds, a pre-purchase drain survey
-                                can reveal hidden problems before you exchange. Issues such as cracked
-                                pipes or root ingress might not show up in a standard building survey.
-                            </p>
+                        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <Image
+                                src="/images/home-buyer-drain-survey.png"
+                                alt="Home buyer drain survey in progress"
+                                width={400}
+                                height={250}
+                                className="img-resp"
+                            />
+                            <div style={{ padding: '1.5rem' }}>
+                                <h3>Home Buyers</h3>
+                                <p>
+                                    If you&rsquo;re buying a property in Leeds, a pre-purchase drain survey
+                                    can reveal hidden problems before you exchange. Issues such as cracked
+                                    pipes or root ingress might not show up in a standard building survey.
+                                </p>
+                            </div>
                         </div>
-                        <div className="card">
-                            <h3>Homeowners</h3>
-                            <p>
-                                Recurring blockages, slow-draining sinks, or unpleasant smells often
-                                point to a deeper issue. A camera survey pinpoints the cause so you
-                                can fix the right problem — not just treat the symptoms.
-                            </p>
+                        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <Image
+                                src="/images/drain-survey-residential-leeds.png"
+                                alt="Residential drain survey at a Leeds home"
+                                width={400}
+                                height={250}
+                                className="img-resp"
+                            />
+                            <div style={{ padding: '1.5rem' }}>
+                                <h3>Homeowners</h3>
+                                <p>
+                                    Recurring blockages, slow-draining sinks, or unpleasant smells often
+                                    point to a deeper issue. A camera survey pinpoints the cause so you
+                                    can fix the right problem — not just treat the symptoms.
+                                </p>
+                            </div>
                         </div>
-                        <div className="card">
-                            <h3>Landlords &amp; Letting Agents</h3>
-                            <p>
-                                Proactive drainage checks help avoid emergency callouts and tenant
-                                complaints. A survey report also provides documentation for compliance
-                                and maintenance records.
-                            </p>
+                        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <Image
+                                src="/images/drain-inspection-technician.png"
+                                alt="Drainage technician performing a compliance survey"
+                                width={400}
+                                height={250}
+                                className="img-resp"
+                            />
+                            <div style={{ padding: '1.5rem' }}>
+                                <h3>Landlords &amp; Letting Agents</h3>
+                                <p>
+                                    Proactive drainage checks help avoid emergency callouts and tenant
+                                    complaints. A survey report also provides documentation for compliance
+                                    and maintenance records.
+                                </p>
+                            </div>
                         </div>
-                        <div className="card">
-                            <h3>Businesses &amp; Commercial Properties</h3>
-                            <p>
-                                Commercial kitchens, car parks, and larger premises often have more
-                                complex drainage systems. A CCTV survey identifies fatberg build-up,
-                                grease traps issues, or structural wear before they cause disruption.
-                            </p>
+                        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <Image
+                                src="/images/commercial-drain-survey-leeds.png"
+                                alt="Commercial CCTV drain survey at a business premises"
+                                width={400}
+                                height={250}
+                                className="img-resp"
+                            />
+                            <div style={{ padding: '1.5rem' }}>
+                                <h3>Businesses &amp; Commercial Properties</h3>
+                                <p>
+                                    Commercial kitchens, car parks, and larger premises often have more
+                                    complex drainage systems. A CCTV survey identifies fatberg build-up,
+                                    grease traps issues, or structural wear before they cause disruption.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

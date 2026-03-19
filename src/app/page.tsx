@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import CTABanner from '@/components/CTABanner';
 import { PHONE_DISPLAY, PHONE_TEL } from '@/lib/constants';
 import { AREA_DATA } from '@/lib/areas';
@@ -15,8 +16,16 @@ export default function HomePage() {
     return (
         <>
             {/* ── Hero ──────────────────────────────────────── */}
-            <section className="hero">
-                <div className="container">
+            <section className="hero hero--has-image">
+                <Image
+                    src="/images/cctv-drain-survey-leeds-hero.png"
+                    alt="Professional CCTV drain survey engineer in Leeds with van and equipment"
+                    fill
+                    priority
+                    className="hero__bg"
+                    sizes="100vw"
+                />
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <h1>CCTV Drain Surveys in Leeds</h1>
                     <p>
                         Find out exactly what&rsquo;s going on underground. We provide professional
@@ -49,6 +58,15 @@ export default function HomePage() {
                                 The survey results in a detailed report with imagery that shows exactly where
                                 any issues are, their severity, and what action (if any) is recommended.
                             </p>
+                        </div>
+                        <div className="image-wrapper card" style={{ padding: 0, overflow: 'hidden' }}>
+                            <Image
+                                src="/images/cctv-drain-camera-inspection.png"
+                                alt="Close-up of a high-definition drain survey camera entering a pipe"
+                                width={600}
+                                height={400}
+                                className="img-resp"
+                            />
                         </div>
                         <div>
                             <h3 className="mb-1">Common Reasons for a Survey</h3>

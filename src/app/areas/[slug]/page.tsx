@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import CTABanner from '@/components/CTABanner';
 import { PHONE_DISPLAY, PHONE_TEL, SITE_URL, SITE_NAME } from '@/lib/constants';
@@ -45,8 +46,16 @@ export default async function AreaPage({ params }: PageProps) {
     return (
         <>
             {/* ── Hero ──────────────────────────────────────── */}
-            <section className="hero">
-                <div className="container">
+            <section className="hero hero--has-image">
+                <Image
+                    src="/images/industrial-drain-inspection.png"
+                    alt="Industrial drain inspection survey"
+                    fill
+                    priority
+                    className="hero__bg"
+                    sizes="100vw"
+                />
+                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <nav aria-label="Breadcrumb" style={{ marginBottom: '1rem', fontSize: '0.9rem', opacity: 0.85 }}>
                         <Link href="/" style={{ color: '#fff' }}>Home</Link>
                         {' › '}
